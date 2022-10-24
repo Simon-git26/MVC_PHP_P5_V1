@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controller;
+
 abstract class Controller {
     protected function render($variables, $template) {
         ob_start();
