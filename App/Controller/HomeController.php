@@ -6,15 +6,13 @@ use App\Controller\Controller as Controller;
 
 class HomeController extends Controller {
 
-    public function showVarBdd() {
-        $content = "C'est mon contenu";
-
+    public function show() {
         $array_bdd_template = [
             'title' => 'Voici mon titre',
-            'content' => $content,
-            'categories' => []
+            'content' => "C'est mon contenu"
         ];
 
-        $this->render($array_bdd_template, 'home');
+        $this->render(array('array_bdd_template' => $array_bdd_template), 'home');
+        
     }
 }
